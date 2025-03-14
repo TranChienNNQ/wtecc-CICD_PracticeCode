@@ -1,0 +1,14 @@
+name: CI workflow
+
+# Add trigger event
+on: #start listen event
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+# Add a Job
+jobs:
+  build: #NameAction of job
+    runs-on: ubuntu-latest
+    container: python:3.9-
